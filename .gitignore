@@ -1,0 +1,10 @@
+.dart_tool/
+.idea/
+build/
+
+android/local.properties
+
+*.iml
+
+ios/Flutter/ephemeral/
+macos/Flutter/ephemeral/
