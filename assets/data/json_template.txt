@@ -1,0 +1,17 @@
+{
+    "id": "", <-referenced name
+    "name": "", <-user facing name
+    "type": "", <-item category(fish/crops, etc.)
+
+    "community_center": [ <-array for possible multiple entries (will be an empty array if not used in any bundles)
+        {
+            "bundle": "", <-name of bundle
+            "room": "" <-name of room the bundle is in
+        }
+    ],
+
+    "obtain": { <-holds multiple elements for attaining
+        "seasons": [], <-array for possible multiple seasons
+        "locations": [] <-array for possible multiple locations
+    }
+}

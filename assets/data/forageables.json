@@ -1,0 +1,183 @@
+[
+{
+    "id": "daffodil",
+    "name": "Daffodil",
+    "type": "forage",
+ 
+    "community_center": [
+        {
+        "bundle": "Spring Foraging",
+        "room": "Crafts Room"
+        }
+    ],
+
+    "obtain": {
+        "seasons": [
+            "Spring"
+        ],
+        "locations": [
+            "Pelican Town",
+            "Bus Stop",
+            "Cindersap Forest"
+        ]
+    }
+},
+{
+    "id": "dandelion",
+    "name": "Dandelion",
+    "type": "forage",
+
+    "community_center": [
+        {
+            "bundle": "Spring Foraging",
+            "room": "Crafts Room"
+        }
+    ],
+
+    "obtain": {
+        "seasons":[
+            "Spring"
+        ],
+        "locations":[
+            "Pelican Town",
+            "Bus Stop",
+            "Cindersap Forest",
+            "Forest Farm"
+        ]
+    }
+},
+{
+    "id": "leek",
+    "name": "Leek",
+    "type": "forage",
+
+    "community_center": [
+        {
+            "bundle": "Spring Foraging",
+            "room": "Crafts Room"
+        }
+    ],
+
+    "obtain": {
+        "seasons":[
+            "Spring"
+        ],
+        "locations":[
+            "Backwoods",
+            "Mountain",
+            "Forest Farm",
+            "Bus Stop",
+            "Railroad"
+        ]
+    }
+},
+{
+    "id": "wild_horseradish",
+    "name": "Wild Horseradish",
+    "type": "forage",
+
+    "community_center": [
+        {
+            "bundle": "Spring Foraging",
+            "room": "Crafts Room"
+        }
+    ],
+
+    "obtain": {
+        "seasons": [
+            "Spring"
+        ],
+        "locations": [
+            "Secret Woods",
+            "Cindersap Forest",
+            "Backwoods",
+            "Mountain",
+            "Forest Farm"
+        ]
+    }
+},
+{
+    "id": "common_mushroom",
+    "name": "Common Mushroom",
+    "type": "forage",
+
+    "community_center": [
+        {
+            "bundle": "Fall Foraging",
+            "room": "Crafts Room"
+        }
+    ],
+
+    "obtain": {
+        "seasons": [
+            "Spring",
+            "Summer",
+            "Fall"
+        ],
+        "locations": [
+            "Cindersap Forest",
+            "Secret Woods",
+            "Forest Farm",
+            "Mountain",
+            "Backwoods",
+            "Farm Cave"
+        ]
+    }
+},
+{
+    "id": "morel",
+    "name": "Morel",
+    "type": "forage",
+
+    "community_center": [
+        {
+            "bundle": "Exotic Foraging",
+            "room": "Crafts Room"
+        }
+    ],
+    "obtain":{
+        "seasons": [
+            "Spring"
+        ],
+        "locations": [
+            "Secret Woods",
+            "Forest Farm",
+            "Farm Cave"
+        ]
+    }
+},
+{
+    "id": "salmonberry",
+    "name": "Salmonberry",
+    "type": "forage",
+
+    "community_center":
+    [],
+    
+    "obtain": {
+        "seasons": [
+            "Spring"
+        ],
+        "locations": [
+            "Pelican Town",
+            "Cindersap Forest"
+        ]
+    }
+},
+{
+    "id": "spring_onion",
+    "name": "Spring Onion",
+    "type": "forage",
+
+    "community_center":
+    [],
+
+    "obtain": {
+        "seasons": [
+            "Spring"
+        ],
+        "locations": [
+            "Cindersap Forest"
+        ]
+    }
+}]
