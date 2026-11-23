@@ -45,7 +45,15 @@ Finished:
   
 	project folder created
 
+	Blank APP loaded
+
+	Screen Created
+
+	Loading to screen
+
+	Layout adjustments
+
 # Current Milestone:
 Phase 0 (set-up)
 
-Next phase: test blank flutter app on android studio
+Next phase: Loading JSON to screen

@@ -2,8 +2,38 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 
-class ForageablesScreen extends StatelessWidget {
+class ForageablesScreen extends StatefulWidget {
   const ForageablesScreen({super.key});
+
+  @override
+  State<ForageablesScreen> createState() => _ForageablesScreenState();
+}
+
+class _ForageablesScreenState extends State<ForageablesScreen> {
+
+  List<dynamic> forageables = [];
+
+  Future<void> loadJson() async {
+    
+   
+  
+    String data = await rootBundle.loadString('assets/data/forageables.json');
+    var loadedforageables = jsonDecode(data);
+
+    setState((){
+      this.forageables = loadedforageables;
+    });
+
+    for (var item in forageables) {
+      print(item['id']);
+      print(item['name']);
+    }
+  }
+  @override
+  void initState() {
+    super.initState();
+    loadJson();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,96 +58,18 @@ class ForageablesScreen extends StatelessWidget {
         Expanded(
           child: SingleChildScrollView(
             child:Column(
-              children:[
+              children: forageables.map((item){
+                return ExpansionTile(
+                  title: Text(item['name']),
+                );
+              }).toList(),
+            )
+              
 
 
-                ExpansionTile(
-                  title: Text("Daffodil"),
-                  children: [
-                  Padding(
-                    padding: EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Season: Spring"),
-                        SizedBox(height: 8),
-                        Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                        SizedBox(height: 8),
-                        Text("Bundle: Spring Foraging Bundle"),
-                        SizedBox(height: 8),
-                        Text("Room: Crafts Room"),
-                      ]
-                    ),
-                  ),
-                ],  
-              ),
 
-                ExpansionTile(
-                  title: Text("Dandelion"),
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Season: Spring"),
-                          SizedBox(height: 8),
-                          Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                          SizedBox(height: 8),
-                          Text("Bundle: Spring Foraging Bundle"),
-                          SizedBox(height: 8),
-                          Text("Room: Crafts Room"),
-                          SizedBox(height: 8),
-                        ]
-                      ),
-                    ),
-                  ],  
-                ),
-
-                ExpansionTile(
-              title: Text("Leek"),
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Season: Spring"),
-                      SizedBox(height: 8),
-                      Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                      SizedBox(height: 8),
-                      Text("Bundle: Spring Foraging Bundle"),
-                      SizedBox(height: 8),
-                      Text("Room: Crafts Room"),
-                    ]
-                  ),
-                ),
-              ],  
-            ),
-
-                ExpansionTile(
-                  title: Text("Wild Horseradish"),
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Season: Spring"),
-                      SizedBox(height: 8),
-                      Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                      SizedBox(height: 8),
-                      Text("Bundle: Spring Foraging Bundle"),
-                      SizedBox(height: 8),
-                      Text("Room: Crafts Room"),
-                    ]
-                  ),
-                ),
-              ],  
-            ),
-            ],
+            
           ),
-        ),
         ),
         ],
       ),
