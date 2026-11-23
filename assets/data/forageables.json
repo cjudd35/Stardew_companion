@@ -151,8 +151,7 @@
     "name": "Salmonberry",
     "type": "forage",
 
-    "community_center":
-    [],
+    "community_center":[],
     
     "obtain": {
         "seasons": [
@@ -169,8 +168,7 @@
     "name": "Spring Onion",
     "type": "forage",
 
-    "community_center":
-    [],
+    "community_center":[],
 
     "obtain": {
         "seasons": [

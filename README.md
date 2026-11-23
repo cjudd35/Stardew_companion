@@ -51,9 +51,17 @@ Finished:
 
 	Loading to screen
 
+Phase 0.0 -setup -complete
+
 	Layout adjustments
 
-# Current Milestone:
-Phase 0 (set-up)
+	Loads JSON to screen
 
-Next phase: Loading JSON to screen
+	Screen now reads from JSON and has loops to iterate through json entries and elements
+
+	UI update
+
+# Current Milestone:
+Phase 0.1 - Data/UI implimentations 
+
+Next goal: Finishing first screen.

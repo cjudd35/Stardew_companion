@@ -12,22 +12,39 @@ class ForageablesScreen extends StatefulWidget {
 class _ForageablesScreenState extends State<ForageablesScreen> {
 
   List<dynamic> forageables = [];
+  List<dynamic> springForageablesBundleItems = [];
 
   Future<void> loadJson() async {
     
    
   
     String data = await rootBundle.loadString('assets/data/forageables.json');
-    var loadedforageables = jsonDecode(data);
+    var loadedForageables = jsonDecode(data);
+
 
     setState((){
-      this.forageables = loadedforageables;
+      forageables = loadedForageables;
+      
+      springForageablesBundleItems = [];
+
+      
+    for (var item in loadedForageables){
+      var communityCenter = item['community_center'];
+
+      bool inBundle = false;
+
+      for (var cc in communityCenter) {
+        if (cc['bundle'] == 'Spring Foraging') {
+          inBundle = true;
+        }
+      }
+
+      if (inBundle){
+        springForageablesBundleItems.add(item);
+      }
+    }
     });
 
-    for (var item in forageables) {
-      print(item['id']);
-      print(item['name']);
-    }
   }
   @override
   void initState() {
@@ -58,9 +75,19 @@ class _ForageablesScreenState extends State<ForageablesScreen> {
         Expanded(
           child: SingleChildScrollView(
             child:Column(
-              children: forageables.map((item){
+              children: springForageablesBundleItems.map((item){
+                    var lable = 
+                    item['obtain']['locations'].length > 1
+                    ? 'Locations:'
+                    : 'Location:';
                 return ExpansionTile(
                   title: Text(item['name']),
+                  children: [
+                    Text(lable),
+                    ...item['obtain']['locations'].map<Widget>((location){
+                      return Text('- $location');
+                    })
+                  ],
                 );
               }).toList(),
             )
