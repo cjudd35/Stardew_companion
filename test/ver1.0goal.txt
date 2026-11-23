@@ -1,0 +1,4 @@
+welcome screen (tap to begin screen)
+-community center (act as a home screen and let you choose what room from here)
+--crafts room (shows the craft room bundles)
+---spring foreagables (shows the items needed, collapsible for information)
