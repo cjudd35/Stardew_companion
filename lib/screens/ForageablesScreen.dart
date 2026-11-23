@@ -8,64 +8,73 @@ class ForageablesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return const Scaffold(
+    return  Scaffold(
       
-      body: SingleChildScrollView(
-        child: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Spring Forageables Bundle', 
+      body: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.fromLTRB
+            (34, 50, 34, 16),
+            child: Text(
+              'Spring Forageables Bundle',
               style: TextStyle(
               fontSize: 24,
-              fontWeight: FontWeight.bold)),
-
-            ExpansionTile(
-              title: Text("Daffodil"),
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Season: Spring"),
-                      SizedBox(height: 8),
-                      Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                      SizedBox(height: 8),
-                      Text("Bundle: Spring Foraging Bundle"),
-                      SizedBox(height: 8),
-                      Text("Room: Crafts Room"),
-                    ]
-                  ),
-                ),
-              ],  
+              fontWeight: FontWeight.bold
             ),
+          ),
+          ),
+
+        Expanded(
+          child: SingleChildScrollView(
+            child:Column(
+              children:[
 
 
-            ExpansionTile(
-              title: Text("Dandelion"),
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Season: Spring"),
-                      SizedBox(height: 8),
-                      Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
-                      SizedBox(height: 8),
-                      Text("Bundle: Spring Foraging Bundle"),
-                      SizedBox(height: 8),
-                      Text("Room: Crafts Room"),
-                      SizedBox(height: 8),
-                    ]
+                ExpansionTile(
+                  title: Text("Daffodil"),
+                  children: [
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Season: Spring"),
+                        SizedBox(height: 8),
+                        Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
+                        SizedBox(height: 8),
+                        Text("Bundle: Spring Foraging Bundle"),
+                        SizedBox(height: 8),
+                        Text("Room: Crafts Room"),
+                      ]
+                    ),
                   ),
-                ),
-              ],  
-            ),
+                ],  
+              ),
 
-            ExpansionTile(
+                ExpansionTile(
+                  title: Text("Dandelion"),
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Season: Spring"),
+                          SizedBox(height: 8),
+                          Text("Location: The Cindersap Forest, The Secret Woods, The Farm"),
+                          SizedBox(height: 8),
+                          Text("Bundle: Spring Foraging Bundle"),
+                          SizedBox(height: 8),
+                          Text("Room: Crafts Room"),
+                          SizedBox(height: 8),
+                        ]
+                      ),
+                    ),
+                  ],  
+                ),
+
+                ExpansionTile(
               title: Text("Leek"),
               children: [
                 Padding(
@@ -86,13 +95,13 @@ class ForageablesScreen extends StatelessWidget {
               ],  
             ),
 
-            ExpansionTile(
-              title: Text("Wild Horseradish"),
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                ExpansionTile(
+                  title: Text("Wild Horseradish"),
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("Season: Spring"),
                       SizedBox(height: 8),
@@ -107,9 +116,11 @@ class ForageablesScreen extends StatelessWidget {
               ],  
             ),
             ],
-        )
-          )
-      )
-        );
+          ),
+        ),
+        ),
+        ],
+      ),
+    );
   }
 }
