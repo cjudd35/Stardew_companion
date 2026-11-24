@@ -61,7 +61,13 @@ Phase 0.0 -setup -complete
 
 	UI update
 
+	Added second screen
+
+	Added AppBar for back and forth mobility
+
+	
+
 # Current Milestone:
 Phase 0.1 - Data/UI implimentations 
 
-Next goal: Finishing first screen.
+Next goal: Finishing second screen.

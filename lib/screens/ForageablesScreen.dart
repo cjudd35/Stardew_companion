@@ -56,6 +56,9 @@ class _ForageablesScreenState extends State<ForageablesScreen> {
   Widget build(BuildContext context) {
     
     return  Scaffold(
+      appBar: AppBar(
+        title: Text('Spring Forageables'),
+      ),
       
       body: Column(
         children: [
